@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap");
+html {
+  font-family: "Inter", sans-serif;
+}
+body {
+  padding: 20px;
+}
+div,
+section,
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main {
+  position: relative;
+  gap: 20px;
+}
+.slide {
+  position: absolute;
+  top: 100px;
+  transition: all 0.5s ease-in-out;
+}
+section:nth-child(2) {
+  background-image: url("images/pattern-curve.svg");
+  background-repeat: no-repeat;
+  background-position: 0% 100%;
+  background-size: 100%;
+}
+
+section:nth-child(1) {
+  min-height: calc(100% + 20%);
+  box-sizing: border-box;
+  padding: 20px;
+  background-image: url("images/pattern-bg.svg");
+  background-size: 90%;
+  background-position: 20% 50%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+section:nth-child(1) img {
+  box-shadow: 0 8px 200px -6px black;
+}
+section p {
+  padding: 40px 20px 20px 20px;
+  text-align: center;
+  background-image: url("images/pattern-quotes.svg");
+  background-repeat: no-repeat;
+  background-size: 20%;
+  background-position: 50% 0%;
+  font-size: 150%;
+}
+div section img {
+  width: 75%;
+}
+
+span {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  display: block;
+  background: white;
+  padding: 20px;
+  width: 80px;
+  border-radius: 40px;
+  position: absolute;
+  bottom: 0px;
+}
+button {
+  background: none;
+  border: none;
+}
+button:nth-child(2) {
+  float: right;
+}
+section aside {
+  font-size: 130%;
+  font-weight: 700;
+  text-align: center;
+  margin-top: -20px;
+}
+section aside small {
+  display: block;
+  font-weight: 200;
+}
+.inactive {
+  z-index: 0;
+  opacity: 0;
+}
+.active {
+  z-index: 1;
+  opacity: 1;
+}
+@media screen and (min-width: 800px) {
+  div {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  div section {
+    width: 50%;
+  }
+  section p,
+  section aside {
+    text-align: left;
+  }
+  section aside {
+    margin-left: 15px;
+  }
+  section:nth-child(2) {
+    position: relative;
+    left: 15%;
+    align-items: start;
+    justify-content: center;
+  }
+  span {
+    left: 20%;
+  }
+}
